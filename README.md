@@ -20,6 +20,12 @@ Modelamos em Java o núcleo de combate da **Specter League**, substituindo a ló
 
 ---
 
+## Diagrama de Classes
+
+![Diagrama de Classes - Specter League](diagrama-classes.png)
+
+---
+
 ## Uso Responsável de IA Generativa
 
 * **Ferramenta utilizada:** Gemini
