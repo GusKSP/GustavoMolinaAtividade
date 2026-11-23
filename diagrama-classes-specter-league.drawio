@@ -1,0 +1,91 @@
+<mxfile host="app.diagrams.net" modified="2026-11-23T10:31:00.000Z" agent="Antigravity" version="24.7.17" type="device">
+  <diagram name="Diagrama de Classes - Specter League" id="specter-league-class-diagram">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Classe Abstrata: SpecterIA -->
+        <mxCell id="specter-ia" value="&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;&lt;i&gt;SpecterIA&lt;/i&gt;&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=44;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="340" y="60" width="270" height="202" as="geometry" />
+        </mxCell>
+        <mxCell id="specter-ia-attr-1" value="- energia: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="specter-ia">
+          <mxGeometry y="44" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="specter-ia-attr-2" value="- sincronizado: boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="specter-ia">
+          <mxGeometry y="68" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="specter-ia-attr-3" value="- memoria: MemoriaDeCombate" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="specter-ia">
+          <mxGeometry y="92" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="specter-ia-sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#6c8ebf;" vertex="1" parent="specter-ia">
+          <mxGeometry y="116" width="270" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="specter-ia-method-1" value="+ &lt;i&gt;executarTurno()&lt;/i&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="specter-ia">
+          <mxGeometry y="124" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="specter-ia-method-2" value="+ receberDano(valor: int)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="specter-ia">
+          <mxGeometry y="148" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="specter-ia-method-3" value="+ estaAtivo(): boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="specter-ia">
+          <mxGeometry y="172" width="270" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Classe: MemoriaDeCombate (Composição) -->
+        <mxCell id="memoria-de-combate" value="&lt;b&gt;MemoriaDeCombate&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="780" y="102" width="270" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="memoria-attr-1" value="- estiloAssinatura: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="memoria-de-combate">
+          <mxGeometry y="32" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="memoria-attr-2" value="- historicoAcoes: List&amp;lt;String&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="memoria-de-combate">
+          <mxGeometry y="56" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="memoria-sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#d6b656;" vertex="1" parent="memoria-de-combate">
+          <mxGeometry y="80" width="270" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="memoria-method-1" value="+ registrarAcao(acao: String)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="memoria-de-combate">
+          <mxGeometry y="88" width="270" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Subclasse: WardenSpecter -->
+        <mxCell id="warden-specter" value="&lt;b&gt;WardenSpecter&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="170" y="360" width="230" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="warden-sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#82b366;" vertex="1" parent="warden-specter">
+          <mxGeometry y="32" width="230" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="warden-method-1" value="+ executarTurno()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="warden-specter">
+          <mxGeometry y="40" width="230" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Subclasse: AssassinSpecter -->
+        <mxCell id="assassin-specter" value="&lt;b&gt;AssassinSpecter&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="550" y="360" width="230" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="assassin-sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#b85450;" vertex="1" parent="assassin-specter">
+          <mxGeometry y="32" width="230" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="assassin-method-1" value="+ executarTurno()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="assassin-specter">
+          <mxGeometry y="40" width="230" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Relacionamento: Composição (SpecterIA -> MemoriaDeCombate) -->
+        <mxCell id="rel-composicao" value="composição (tem uma)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamondThin;startFill=1;startSize=16;endArrow=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="specter-ia" target="memoria-de-combate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Relacionamento: Herança (WardenSpecter para SpecterIA) -->
+        <mxCell id="rel-heranca-warden" value="herança" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=14;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="warden-specter" target="specter-ia">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Relacionamento: Herança (AssassinSpecter para SpecterIA) -->
+        <mxCell id="rel-heranca-assassin" value="herança" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=14;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="assassin-specter" target="specter-ia">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
